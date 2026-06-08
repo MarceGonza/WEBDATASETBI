@@ -1,0 +1,23 @@
+{
+  "name": "datasetbi-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "build": "npm run build:client && npm run build:ssr && npm run static && npm run verify",
+    "preview": "vite preview",
+    "static": "node build-static.js",
+    "verify": "node verify-scrappeable.js",
+    "build:scrapeable": "npm run build"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.3"
+  }
+}

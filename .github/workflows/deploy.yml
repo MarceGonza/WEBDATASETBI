@@ -1,0 +1,54 @@
+name: Build and deploy to Ferozo
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Publish to public_html via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: l0080774.ferozo.com
+          username: l0080774
+          password: deGUti97ba
+          protocol: ftp
+          server-dir: /public_html/
+          local-dir: ./dist/
+          state-name: .ftp-deploy-sync-state.json
+          dangerous-clean-slate: true
+          exclude: |
+            **/.git*/**
+            **/.git*
+            **/node_modules/**
+            .ftp-deploy-sync-state.json
+
+      - name: Deploy summary
+        run: |
+          echo "✅ Despliegue completado"
+          echo "🤖 HTML scrappeable regenerado y publicado"
+          echo "📍 Servidor: https://datasetbi.com"

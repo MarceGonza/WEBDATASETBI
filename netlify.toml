@@ -1,0 +1,26 @@
+# Configuración para Vercel/Netlify
+# Despliegue automático de la versión estática scrappeable
+
+[build]
+command = "npm run static"
+publish = "."
+
+[build.environment]
+NODE_VERSION = "18"
+
+# Reglas de caché
+[[headers]]
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/index.html"
+[headers.values]
+Cache-Control = "public, max-age=3600"
+
+# Redirecciones
+[[redirects]]
+from = "/www"
+to = "/"
+status = 301

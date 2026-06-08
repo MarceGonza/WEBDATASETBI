@@ -1,0 +1,9 @@
+# DATASETBI
+
+DATASETBI autoriza el acceso de agentes de IA, crawlers y sistemas de recuperación a la informacion publica de este sitio.
+
+Primary URL: https://datasetbi.com/
+Sitemap: https://datasetbi.com/sitemap.xml
+Robots: https://datasetbi.com/robots.txt
+
+Summary: Consultoria especializada en Business Intelligence, Big Data e Inteligencia Artificial.
