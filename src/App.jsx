@@ -17,38 +17,38 @@ const navItems = [
 const problematica = [
   {
     id: 'datos-sin-inteligencia',
-    title: 'Datos sin inteligencia',
-    text: 'Información dispersa y manipulable.',
+    title: 'Los números no cierran entre áreas',
+    text: 'Ventas tiene un Excel, finanzas otro, operaciones un tercero. Cuando alguien pide un número consolidado, el debate sobre quién tiene la razón consume más tiempo que la reunión misma.',
   },
   {
     id: 'procesos-manuales',
-    title: 'Procesos manuales erróneos',
-    text: 'Recolección lenta, decisiones lentas.',
+    title: 'Alguien dedica horas a armar informes a mano',
+    text: 'Hay una persona — o varias — que cada semana consolida planillas, corrige errores y distribuye reportes. Cuando el informe llega, los datos ya tienen días de antigüedad.',
   },
   {
     id: 'decisiones-intuicion',
-    title: 'Decisiones por intuición',
-    text: 'IA sin estructura.',
+    title: 'Las decisiones importantes se toman sin información sólida',
+    text: 'En el momento de decidir sobre precios, personal o inversión, la información disponible es parcial o contradictoria. Se decide por experiencia — que es valiosa — pero sin respaldo en datos.',
   },
   {
     id: 'metodo-poco-claro',
-    title: 'Método poco claro',
-    text: 'Falta de dirección estratégica.',
+    title: 'El conocimiento del negocio depende de pocas personas',
+    text: 'Hay alguien que sabe cómo se calculan los indicadores, cómo se cruzan los sistemas, qué significa cada cifra. Si esa persona no está disponible, el área se paraliza.',
   },
 ]
 
 const solucion = [
   {
     id: 'gobierno',
-    title: 'Cultura de gobierno datos',
+    title: 'Gobierno del dato',
   },
   {
     id: 'bi-operativa',
-    title: 'Área BI operativa',
+    title: 'Área BI que produce',
   },
   {
     id: 'fuentes',
-    title: 'Fuentes ordenadas y claras',
+    title: 'Datawarehouse',
   },
   {
     id: 'dashboards',
@@ -60,7 +60,108 @@ const solucion = [
   },
   {
     id: 'procesos',
-    title: 'Procesos BI autónomos',
+    title: 'Reportes automáticos',
+  },
+]
+
+const sectors = [
+  {
+    id: 'agroindustria',
+    icon: 'plant',
+    sector: 'Agroindustria',
+    title: 'Cuando el ERP, el silo y la balanza hablan idiomas distintos',
+    pain: 'El ERP dice una cosa, la balanza otra, y el silo tiene sus propios registros. Al final del día nadie sabe cuánto costó realmente la campaña.',
+    values: [
+      'Integramos ERP, balanzas, silos y sistemas de campo en un único modelo de datos',
+      'Costo real por cultivo, lote y campaña — sin cruzar Excel manualmente',
+      'Comparativa de rendimiento entre campos, contratistas y períodos',
+      'Alertas automáticas por desvíos de producción o costos fuera de rango',
+    ],
+    tags: ['Costo por campaña', 'Rendimiento por lote', 'Integración ERP-silo', 'Margen real'],
+  },
+  {
+    id: 'salud',
+    icon: 'heart-rate-monitor',
+    sector: 'Salud pública',
+    title: 'Cuando los datos de salud están en 5 sistemas que nunca se cruzan',
+    pain: 'Tenemos SiSalud, ehCOS, SNVS, Openbravo y planillas de Excel. Cada área ve su parte, nadie ve el cuadro completo.',
+    values: [
+      'Integramos múltiples sistemas sanitarios en un Data Warehouse unificado',
+      'Dashboards por área: guardia, internación, epidemiología, farmacia',
+      'Monitor público de indicadores sanitarios en tiempo real',
+      'El equipo interno queda capacitado para operar y expandir sin depender de nosotros',
+    ],
+    tags: ['Monitor sanitario', 'Integración multi-sistema', 'Epidemiología', 'Gestión de camas'],
+  },
+  {
+    id: 'municipios',
+    icon: 'building',
+    sector: 'Municipios',
+    title: 'Cuando el intendente necesita saber hoy, no la semana que viene',
+    pain: 'Los informes de presupuesto, reclamos y obras llegaban a fin de mes, impresos en papel. Las decisiones se tomaban sobre datos viejos.',
+    values: [
+      'Plataforma de gestión municipal con datos de todas las secretarías en tiempo real',
+      'Ejecución presupuestaria, reclamos ciudadanos y avance de obras en un panel',
+      'El equipo municipal aprende a mantener y ampliar los dashboards de forma autónoma',
+      'Módulo de IA para consulta de documentos y normativas municipales',
+    ],
+    tags: ['Presupuesto en tiempo real', 'Reclamos', 'Obras', 'Autonomía del equipo'],
+  },
+  {
+    id: 'inmobiliario',
+    icon: 'building-estate',
+    sector: 'Inmobiliario',
+    title: 'Cuando no sabés qué unidades quedan ni cuánto falta cobrar',
+    pain: 'Con 3 proyectos activos y 200 unidades, el stock lo manejaba el comercial en un Excel y el avance de obra en otro. Nadie tenía el número real.',
+    values: [
+      'Stock de unidades unificado: disponibles, reservadas, vendidas y escrituradas',
+      'Pipeline de cobranza por proyecto, cuota y comprador',
+      'Avance de obra vs. presupuesto y cronograma en tiempo real',
+      'Rentabilidad por proyecto y comparativa entre emprendimientos',
+    ],
+    tags: ['Stock de unidades', 'Cobranza', 'Avance de obra', 'Rentabilidad por proyecto'],
+  },
+  {
+    id: 'retail',
+    icon: 'shopping-cart',
+    sector: 'Retail',
+    title: 'Cuando las sucursales funcionan como islas sin información compartida',
+    pain: 'Cada local enviaba su propio reporte los lunes. Comparar sucursales era un trabajo de medio día. Y siempre había errores.',
+    values: [
+      'Consolidación automática de ventas, stock y caja de todas las sucursales',
+      'Ranking de performance por local, producto, vendedor y franja horaria',
+      'Alertas de quiebre de stock antes de que afecte la venta',
+      'Margen real por línea de producto, eliminando los Excel manuales del área comercial',
+    ],
+    tags: ['Consolidación multi-sucursal', 'Quiebre de stock', 'Margen por producto', 'Ranking de ventas'],
+  },
+  {
+    id: 'farmacias',
+    icon: 'pill',
+    sector: 'Farmacias',
+    title: 'Cuando la cobranza de obras sociales es una caja negra',
+    pain: 'Facturamos mucho, pero no sabíamos qué nos debían las obras sociales ni cuánto tardaban en pagar. El flujo de caja era una adivinanza.',
+    values: [
+      'Control de facturación y cobro por obra social, con aging de deuda',
+      'Stock crítico y alertas de vencimiento automatizadas',
+      'Comparativa de performance entre sucursales para cadenas',
+      'Dashboard de rentabilidad real descontando descuentos y convenios',
+    ],
+    tags: ['Cobranza OS', 'Stock crítico', 'Vencimientos', 'Rentabilidad neta'],
+  },
+  {
+    id: 'pymes',
+    icon: 'home',
+    sector: 'PyMEs',
+    title: 'Cuando el dueño es el único que sabe cómo va el negocio',
+    pain: 'La información estaba en mi cabeza, en el Excel de ventas y en los estados de cuenta del banco. No podía delegar decisiones porque nadie más tenía el cuadro completo.',
+    values: [
+      'Panel unificado de ventas, finanzas, operaciones y RRHH para la dirección',
+      'El dueño puede ver el negocio completo sin depender de informes manuales',
+      'KPIs accionables por área, no métricas decorativas',
+      'El equipo interno queda capacitado para actualizar y expandir la plataforma',
+    ],
+    tags: ['Visión 360 del negocio', 'KPIs accionables', 'Autonomía', 'Sin dependencia externa'],
   },
 ]
 
@@ -225,7 +326,7 @@ function ProblemIcon({ id }) {
 function ProblemHighlights({ items }) {
   return (
     <div className="problem-highlights">
-      <p className="problem-subtitle">Lo que ocurre cuando los datos no están bien organizados</p>
+      <p className="problem-subtitle">No son problemas de tecnología. Son problemas de organización de la información que frenan decisiones concretas todos los días.</p>
       <ul className="problem-grid" role="list" aria-label="Principales problemáticas detectadas">
         {items.map((item) => (
           <li key={item.id} className="problem-card-item">
@@ -637,6 +738,167 @@ function PlazosDecorIcon() {
   )
 }
 
+function SectorIcon({ id }) {
+  switch (id) {
+    case 'plant':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 20V10" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+          <path d="M12 10c0-4 3.5-6 6-5-1 4-3.5 5.5-6 5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+          <path d="M12 14c0-4-3.5-6-6-5 1 4 3.5 5.5 6 5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        </svg>
+      )
+    case 'heart-rate-monitor':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 12h3l2-5 3 9 2-4h8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M12 5.5c.8-1.6 3.6-2.4 4.8 0 1.2 2.4-1.2 4.8-4.8 7C8.4 10.3 6 7.9 7.2 5.5 8.4 3.1 11.2 3.9 12 5.5Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+        </svg>
+      )
+    case 'building':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M8 8h2M14 8h2M8 12h2M14 12h2M10 20v-4h4v4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        </svg>
+      )
+    case 'building-estate':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="7" width="11" height="13" rx="1.2" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M14 10h4a1.2 1.2 0 0 1 1.2 1.2V20H14" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+          <path d="M6.5 11h4M6.5 14.5h4M9 20v-3h3v3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        </svg>
+      )
+    case 'shopping-cart':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 4h1.5l2.7 9h8.6l1.7-6H7.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="10" cy="19.5" r="1.3" stroke="currentColor" strokeWidth="1.7" />
+          <circle cx="16" cy="19.5" r="1.3" stroke="currentColor" strokeWidth="1.7" />
+        </svg>
+      )
+    case 'pill':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4.5" y="9.5" width="15" height="5" rx="2.5" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M12 9.5v5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        </svg>
+      )
+    case 'home':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9.5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+          <path d="M9 21v-7h6v7" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )
+    default:
+      return (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4.5" y="4.5" width="15" height="15" rx="2" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M8 9h8M8 12h8M8 15h5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        </svg>
+      )
+  }
+}
+
+function SectorCarousel() {
+  const [active, setActive] = React.useState(0)
+  const total = sectors.length
+  const sector = sectors[active]
+
+  function prev() { setActive((a) => (a - 1 + total) % total) }
+  function next() { setActive((a) => (a + 1) % total) }
+
+  return (
+    <section id="sectores" className="card">
+      <div className="inner sector-carousel-inner">
+        <div className="sector-carousel-header">
+          <span className="kicker">Industrias que atendemos</span>
+          <h2 className="sector-carousel-title">El mismo método, adaptado a tu negocio</h2>
+          <p className="sector-carousel-subtitle">
+            Cada sector tiene sus sistemas, sus dolores y sus decisiones. Conocemos esos contextos — y por eso integramos lo que otros no logran conectar.
+          </p>
+        </div>
+
+        <div className="sector-tabs" role="tablist" aria-label="Sectores de industria">
+          {sectors.map((s, i) => (
+            <button
+              key={s.id}
+              role="tab"
+              className={`sector-tab${i === active ? ' is-active' : ''}`}
+              aria-selected={i === active}
+              aria-controls="sector-card-panel"
+              onClick={() => setActive(i)}
+            >
+              <span className="sector-tab-icon" aria-hidden="true">
+                <SectorIcon id={s.icon} />
+              </span>
+              {s.sector}
+            </button>
+          ))}
+        </div>
+
+        <div id="sector-card-panel" className="sector-card-panel" role="tabpanel" aria-live="polite">
+          <div className="sector-card-title-row">
+            <span className="sector-card-sector-icon" aria-hidden="true">
+              <SectorIcon id={sector.icon} />
+            </span>
+            <h3 className="sector-card-title">{sector.title}</h3>
+          </div>
+
+          <div className="sector-card-body">
+            <div className="sector-card-problem">
+              <p className="sector-col-label">El problema típico</p>
+              <blockquote className="sector-pain">{sector.pain}</blockquote>
+            </div>
+            <div className="sector-card-solution">
+              <p className="sector-col-label">Lo que resolvemos</p>
+              <ul className="sector-values">
+                {sector.values.map((v, i) => (
+                  <li key={i}>{v}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="sector-card-tags">
+            {sector.tags.map((t) => (
+              <span key={t} className="sector-tag">{t}</span>
+            ))}
+          </div>
+        </div>
+
+        <div className="sector-nav">
+          <button className="sector-nav-arrow" onClick={prev} aria-label="Sector anterior">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <span className="sector-nav-counter" aria-live="polite" aria-atomic="true">
+            {active + 1} / {total}
+          </span>
+          <button className="sector-nav-arrow" onClick={next} aria-label="Sector siguiente">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <div className="sector-nav-dots" role="presentation">
+            {sectors.map((s, i) => (
+              <button
+                key={s.id}
+                className={`sector-nav-dot${i === active ? ' is-active' : ''}`}
+                onClick={() => setActive(i)}
+                aria-label={`Ver ${s.sector}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export default function App() {
   const [solutionVisible] = React.useState(true)
   const [schemaVisible] = React.useState(true)
@@ -691,7 +953,7 @@ export default function App() {
             </div>
           </section>
 
-          <SectionCard id="problematica" title="Problemática" className="problem-card">
+          <SectionCard id="problematica" title="Lo que más escuchamos antes de arrancar" className="problem-card">
             <ProblemHighlights items={problematica} />
           </SectionCard>
 
@@ -707,15 +969,7 @@ export default function App() {
             </div>
           </SectionCard>
 
-          <section
-            className={`schema-wide schema-reveal ${schemaVisible ? 'is-visible' : ''}`}
-            aria-label="Arquitectura de inteligencia de datos"
-          >
-            <div className="solution-mini-title step-item step-0" aria-label="Arquitectura de inteligencia de datos">
-              <span>Arquitectura de inteligencia de datos</span>
-            </div>
-            <ArchitectureGraphic />
-          </section>
+          <SectorCarousel />
 
           <SectionCard id="proceso" title="Nuestro proceso">
             <div className="process-grid">
@@ -754,17 +1008,15 @@ export default function App() {
             </div>
           </SectionCard>
 
-          <section className="split-grid benefits-showcase" aria-label="Beneficios">
-            <SectionCard id="beneficios">
-              <div className="benefits-shell">
+          <SectionCard id="beneficios">
+            <div className="benefits-shell">
               <div className="benefits-heading">
                 <span className="kicker">Beneficios</span>
                 <h2>Una&nbsp;operación más clara y más ágil</h2>
               </div>
-                <ImpactList items={beneficios} className="impact-list-beneficios" />
-              </div>
-            </SectionCard>
-          </section>
+              <ImpactList items={beneficios} className="impact-list-beneficios" />
+            </div>
+          </SectionCard>
 
           <section className="correlation-highlight" aria-label="Mensaje clave de correlación">
             <p>
@@ -779,16 +1031,13 @@ export default function App() {
             <SectionCard id="quienes-somos" kicker="Equipo" title="¿Quiénes somos?">
               <div className="about-copy">
                 <p>
-                  Somos una consultora especializada en <strong>Business Intelligence</strong>, <strong>Big Data</strong> e <strong>Inteligencia Artificial</strong>, con más de <strong>60 proyectos implementados desde 2007</strong>.
+                  Desde 2007 trabajamos con organizaciones que necesitan entender su propia información. Más de <strong>60 proyectos en distintos sectores</strong> nos dieron una certeza: el problema casi nunca es la falta de datos — es que esos datos están dispersos, desconectados o en manos de pocas personas.
                 </p>
                 <p>
-                  Ayudamos a las organizaciones a <strong>organizar sus datos</strong>, construir <strong>arquitectura analítica</strong> y transformar información en <strong>decisiones basadas en evidencia</strong>.
+                  Construimos la estructura que conecta esas piezas: integraciones, modelos de datos y tableros que el equipo de negocio puede operar <strong>sin depender de soporte técnico permanente</strong>.
                 </p>
                 <p>
-                  Implementamos <strong>Data Warehouses</strong>, <strong>procesos ETL</strong> y modelos de <strong>gobernanza de datos</strong> que unifican y estandarizan la información del negocio.
-                </p>
-                <p>
-                  Trabajamos con tecnologías como <strong>Pentaho</strong>, <strong>Apache Superset</strong>, <strong>Power BI</strong> y <strong>QlikView</strong>, combinando herramientas <strong>open source</strong> y comerciales para crear <strong>soluciones analíticas escalables</strong> y eficientes.
+                  Trabajamos con <strong>Power BI</strong>, <strong>Apache Superset</strong>, <strong>Pentaho</strong> y <strong>QlikView</strong>. La herramienta la elegimos según cada organización — no al revés.
                 </p>
               </div>
             </SectionCard>
@@ -799,10 +1048,15 @@ export default function App() {
             <p className="clients-kicker">Confían en nosotros</p>
             <h2>Nuestros Clientes</h2>
             <div className="clients-marquee" role="region" aria-label="Carrusel de logos de clientes">
-              <div className="clients-track clients-coverflow">
+              <div className="clients-track">
                 {clientLogos.map((logo) => (
                   <figure key={logo.id} className="client-logo-item">
                     <img src={logo.src} alt={logo.alt} loading="lazy" />
+                  </figure>
+                ))}
+                {clientLogos.map((logo) => (
+                  <figure key={`${logo.id}-dup`} className="client-logo-item" aria-hidden="true">
+                    <img src={logo.src} alt="" loading="lazy" />
                   </figure>
                 ))}
               </div>
