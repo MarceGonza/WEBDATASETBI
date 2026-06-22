@@ -69,99 +69,92 @@ const sectors = [
     id: 'agroindustria',
     icon: 'plant',
     sector: 'Agroindustria',
-    title: 'Cuando el ERP, el silo y la balanza hablan idiomas distintos',
-    pain: 'El ERP dice una cosa, la balanza otra, y el silo tiene sus propios registros. Al final del día nadie sabe cuánto costó realmente la campaña.',
+    title: 'ERP, silo y balanza: idiomas distintos',
+    pain: 'Nadie sabe cuánto costó realmente la campaña.',
     values: [
-      'Integramos ERP, balanzas, silos y sistemas de campo en un único modelo de datos',
-      'Costo real por cultivo, lote y campaña — sin cruzar Excel manualmente',
-      'Comparativa de rendimiento entre campos, contratistas y períodos',
-      'Alertas automáticas por desvíos de producción o costos fuera de rango',
+      'ERP, balanzas, silos y campo en un único modelo de datos',
+      'Costo real por cultivo, lote y campaña',
+      'Comparativa de rendimiento entre campos y períodos',
     ],
-    tags: ['Costo por campaña', 'Rendimiento por lote', 'Integración ERP-silo', 'Margen real'],
+    tags: ['Costo por campaña', 'Rendimiento por lote', 'Integración ERP-silo'],
   },
   {
     id: 'salud',
     icon: 'heart-rate-monitor',
     sector: 'Salud pública',
-    title: 'Cuando los datos de salud están en 5 sistemas que nunca se cruzan',
-    pain: 'Tenemos SiSalud, ehCOS, SNVS, Openbravo y planillas de Excel. Cada área ve su parte, nadie ve el cuadro completo.',
+    title: 'Datos en 5 sistemas que nunca se cruzan',
+    pain: 'Cada área ve su parte, nadie ve el cuadro completo.',
     values: [
-      'Integramos múltiples sistemas sanitarios en un Data Warehouse unificado',
-      'Dashboards por área: guardia, internación, epidemiología, farmacia',
-      'Monitor público de indicadores sanitarios en tiempo real',
-      'El equipo interno queda capacitado para operar y expandir sin depender de nosotros',
+      'Sistemas sanitarios integrados en un Data Warehouse',
+      'Dashboards por guardia, internación y epidemiología',
+      'Monitor de indicadores sanitarios en tiempo real',
     ],
-    tags: ['Monitor sanitario', 'Integración multi-sistema', 'Epidemiología', 'Gestión de camas'],
+    tags: ['Monitor sanitario', 'Integración multi-sistema', 'Gestión de camas'],
   },
   {
     id: 'municipios',
     icon: 'building',
     sector: 'Municipios',
-    title: 'Cuando el intendente necesita saber hoy, no la semana que viene',
-    pain: 'Los informes de presupuesto, reclamos y obras llegaban a fin de mes, impresos en papel. Las decisiones se tomaban sobre datos viejos.',
+    title: 'El intendente necesita saber hoy, no en una semana',
+    pain: 'Los informes llegaban a fin de mes. Se decidía sobre datos viejos.',
     values: [
-      'Plataforma de gestión municipal con datos de todas las secretarías en tiempo real',
-      'Ejecución presupuestaria, reclamos ciudadanos y avance de obras en un panel',
-      'El equipo municipal aprende a mantener y ampliar los dashboards de forma autónoma',
-      'Módulo de IA para consulta de documentos y normativas municipales',
+      'Datos de todas las secretarías en tiempo real',
+      'Presupuesto, reclamos y obras en un panel',
+      'IA para consulta de documentos y normativas',
     ],
-    tags: ['Presupuesto en tiempo real', 'Reclamos', 'Obras', 'Autonomía del equipo'],
+    tags: ['Presupuesto en tiempo real', 'Reclamos', 'Obras'],
   },
   {
     id: 'inmobiliario',
     icon: 'building-estate',
     sector: 'Inmobiliario',
-    title: 'Cuando no sabés qué unidades quedan ni cuánto falta cobrar',
-    pain: 'Con 3 proyectos activos y 200 unidades, el stock lo manejaba el comercial en un Excel y el avance de obra en otro. Nadie tenía el número real.',
+    title: 'Sin visibilidad de stock ni cobranza',
+    pain: 'El stock en un Excel, el avance de obra en otro. Nadie tenía el número real.',
     values: [
-      'Stock de unidades unificado: disponibles, reservadas, vendidas y escrituradas',
-      'Pipeline de cobranza por proyecto, cuota y comprador',
-      'Avance de obra vs. presupuesto y cronograma en tiempo real',
-      'Rentabilidad por proyecto y comparativa entre emprendimientos',
+      'Stock unificado: disponibles, reservadas y vendidas',
+      'Pipeline de cobranza por proyecto y comprador',
+      'Avance de obra vs. presupuesto en tiempo real',
     ],
-    tags: ['Stock de unidades', 'Cobranza', 'Avance de obra', 'Rentabilidad por proyecto'],
+    tags: ['Stock de unidades', 'Cobranza', 'Avance de obra'],
   },
   {
     id: 'retail',
     icon: 'shopping-cart',
     sector: 'Retail',
-    title: 'Cuando las sucursales funcionan como islas sin información compartida',
-    pain: 'Cada local enviaba su propio reporte los lunes. Comparar sucursales era un trabajo de medio día. Y siempre había errores.',
+    title: 'Sucursales como islas sin información compartida',
+    pain: 'Comparar sucursales era medio día de trabajo. Siempre había errores.',
     values: [
-      'Consolidación automática de ventas, stock y caja de todas las sucursales',
-      'Ranking de performance por local, producto, vendedor y franja horaria',
-      'Alertas de quiebre de stock antes de que afecte la venta',
-      'Margen real por línea de producto, eliminando los Excel manuales del área comercial',
+      'Ventas, stock y caja consolidados de todas las sucursales',
+      'Ranking por local, producto y vendedor',
+      'Alertas de quiebre de stock automáticas',
     ],
-    tags: ['Consolidación multi-sucursal', 'Quiebre de stock', 'Margen por producto', 'Ranking de ventas'],
+    tags: ['Multi-sucursal', 'Quiebre de stock', 'Ranking de ventas'],
   },
   {
     id: 'farmacias',
     icon: 'pill',
     sector: 'Farmacias',
-    title: 'Cuando la cobranza de obras sociales es una caja negra',
-    pain: 'Facturamos mucho, pero no sabíamos qué nos debían las obras sociales ni cuánto tardaban en pagar. El flujo de caja era una adivinanza.',
+    title: 'La cobranza de obras sociales: una caja negra',
+    pain: 'No sabíamos qué nos debían ni cuánto tardaban en pagar.',
     values: [
-      'Control de facturación y cobro por obra social, con aging de deuda',
-      'Stock crítico y alertas de vencimiento automatizadas',
-      'Comparativa de performance entre sucursales para cadenas',
-      'Dashboard de rentabilidad real descontando descuentos y convenios',
+      'Facturación y cobro por obra social con aging de deuda',
+      'Stock crítico y alertas de vencimiento',
+      'Rentabilidad real descontando convenios',
     ],
-    tags: ['Cobranza OS', 'Stock crítico', 'Vencimientos', 'Rentabilidad neta'],
+    tags: ['Cobranza OS', 'Stock crítico', 'Rentabilidad neta'],
   },
   {
     id: 'pymes',
     icon: 'home',
     sector: 'PyMEs',
-    title: 'Cuando el dueño es el único que sabe cómo va el negocio',
-    pain: 'La información estaba en mi cabeza, en el Excel de ventas y en los estados de cuenta del banco. No podía delegar decisiones porque nadie más tenía el cuadro completo.',
+    title: 'Solo el dueño sabe cómo va el negocio',
+    pain: 'La información estaba en la cabeza del dueño y en planillas dispersas.',
     values: [
-      'Panel unificado de ventas, finanzas, operaciones y RRHH para la dirección',
-      'El dueño puede ver el negocio completo sin depender de informes manuales',
-      'KPIs accionables por área, no métricas decorativas',
-      'El equipo interno queda capacitado para actualizar y expandir la plataforma',
+      'Panel unificado de ventas, finanzas y operaciones',
+      'KPIs accionables por área',
+      'Equipo capacitado para operar sin dependencia externa',
     ],
-    tags: ['Visión 360 del negocio', 'KPIs accionables', 'Autonomía', 'Sin dependencia externa'],
+    tags: ['Visión 360', 'KPIs accionables', 'Autonomía'],
   },
 ]
 
@@ -174,59 +167,19 @@ const beneficios = [
 ]
 
 const procesoPasos = [
-  {
-    id: 'diagnostico',
-    title: 'Diagnóstico y relevamiento',
-    text: 'Identificamos necesidades, fuentes y puntos críticos.',
-  },
-  {
-    id: 'integracion',
-    title: 'Integración y arquitectura',
-    text: 'Construimos una base sólida y preparada para escalar.',
-  },
-  {
-    id: 'modelado',
-    title: 'Modelado y automatización',
-    text: 'Diseñamos flujos automáticos para reducir tareas y errores.',
-  },
-  {
-    id: 'dashboards',
-    title: 'Dashboards y KPIs',
-    text: 'Creamos indicadores alineados a decisiones clave.',
-  },
-  {
-    id: 'capacitacion',
-    title: 'Capacitación',
-    text: 'Dejamos al equipo listo para operar sin dependencia externa.',
-  },
-  {
-    id: 'acompanamiento',
-    title: 'Acompañamiento',
-    text: 'Seguimiento mensual para ajustar y evolucionar la solución.',
-  },
+  { id: 'diagnostico', title: 'Diagnóstico', text: 'Necesidades, fuentes y puntos críticos.' },
+  { id: 'integracion', title: 'Arquitectura', text: 'Base sólida y preparada para escalar.' },
+  { id: 'modelado', title: 'Automatización', text: 'Flujos automáticos, menos errores.' },
+  { id: 'dashboards', title: 'Dashboards', text: 'Indicadores alineados a decisiones.' },
+  { id: 'capacitacion', title: 'Capacitación', text: 'Equipo listo para operar solo.' },
+  { id: 'acompanamiento', title: 'Acompañamiento', text: 'Seguimiento mensual continuo.' },
 ]
 
 const plazosEtapas = [
-  {
-    id: 'analisis',
-    title: 'Análisis funcional',
-    caption: 'Definimos la herramienta adecuada',
-  },
-  {
-    id: 'implementacion',
-    title: 'Implementación',
-    caption: 'Instalamos y configuramos',
-  },
-  {
-    id: 'diseno',
-    title: 'Diseño de dashboards',
-    caption: 'Creamos tu aplicación de BI',
-  },
-  {
-    id: 'transferencia',
-    title: 'Transferencia',
-    caption: 'Capacitamos a tu equipo',
-  },
+  { id: 'analisis', title: 'Análisis funcional' },
+  { id: 'implementacion', title: 'Despliegue' },
+  { id: 'diseno', title: 'Diseño primer dashboard' },
+  { id: 'transferencia', title: 'Transferencia' },
 ]
 
 const clientLogos = [
@@ -324,12 +277,18 @@ function ProblemIcon({ id }) {
 }
 
 function ProblemHighlights({ items }) {
+  const [active, setActive] = React.useState(0)
+  const total = items.length
+
+  function prev() { setActive((a) => (a - 1 + total) % total) }
+  function next() { setActive((a) => (a + 1) % total) }
+
   return (
     <div className="problem-highlights">
       <p className="problem-subtitle">No son problemas de tecnología. Son problemas de organización de la información que frenan decisiones concretas todos los días.</p>
       <ul className="problem-grid" role="list" aria-label="Principales problemáticas detectadas">
-        {items.map((item) => (
-          <li key={item.id} className="problem-card-item">
+        {items.map((item, i) => (
+          <li key={item.id} className={`problem-card-item${i === active ? ' is-active' : ''}`}>
             <article className="problem-pillar">
               <h3 className="problem-item-title">{item.title}</h3>
               <p className="problem-item-text">{item.text}</p>
@@ -337,6 +296,28 @@ function ProblemHighlights({ items }) {
           </li>
         ))}
       </ul>
+      <div className="problem-carousel-nav">
+        <button className="problem-carousel-arrow" onClick={prev} aria-label="Problema anterior">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+        <div className="problem-carousel-dots">
+          {items.map((item, i) => (
+            <button
+              key={item.id}
+              className={`problem-carousel-dot${i === active ? ' is-active' : ''}`}
+              onClick={() => setActive(i)}
+              aria-label={`Ver problema ${i + 1}`}
+            />
+          ))}
+        </div>
+        <button className="problem-carousel-arrow" onClick={next} aria-label="Problema siguiente">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
     </div>
   )
 }
@@ -815,7 +796,7 @@ function SectorCarousel() {
       <div className="inner sector-carousel-inner">
         <div className="sector-carousel-header">
           <span className="kicker">Industrias que atendemos</span>
-          <h2 className="sector-carousel-title">El mismo método, adaptado a tu negocio</h2>
+          <h2 className="sector-carousel-title">El mismo método, adaptado a tu Sector de Negocio</h2>
           <p className="sector-carousel-subtitle">
             Cada sector tiene sus sistemas, sus dolores y sus decisiones. Conocemos esos contextos — y por eso integramos lo que otros no logran conectar.
           </p>
@@ -931,29 +912,29 @@ export default function App() {
       </header>
 
       <main id="contenido">
-        <div className="container">
-          <section id="inicio" className="hero-section" aria-label="Propuesta principal">
-            <div className="hero-shell">
-              <div className="hero-copy">
-                <h1>
-                  Construimos la <span className="hero-emphasis">inteligencia</span> que tu
-                  negocio necesita para crecer.
-                </h1>
-                <p className="hero-text">
-                  Ordenamos tus datos, automatizamos procesos y convertimos la información
-                  en decisiones concretas para áreas comerciales, operativas y de gestión.
-                </p>
-              </div>
+        <section id="inicio" className="hero-section" aria-label="Propuesta principal">
+          <div className="hero-shell">
+            <div className="hero-copy">
+              <h1>
+                Construimos la <span className="hero-emphasis">inteligencia</span> que tu
+                negocio necesita para crecer.
+              </h1>
+              <p className="hero-text">
+                Ordenamos tus datos, automatizamos procesos y convertimos la información
+                en decisiones concretas para áreas comerciales, operativas y de gestión.
+              </p>
+            </div>
 
-              <div className="hero-visual" aria-label="Visual de inteligencia de negocio">
-                <div className="hero-image-shell">
-                  <img className="hero-image" src="/assets/heroimg.png" alt="Visual de inteligencia artificial y crecimiento" />
-                </div>
+            <div className="hero-visual" aria-label="Visual de inteligencia de negocio">
+              <div className="hero-image-shell">
+                <img className="hero-image" src="/assets/heroimg.png" alt="Visual de inteligencia artificial y crecimiento" />
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <SectionCard id="problematica" title="Lo que más escuchamos antes de arrancar" className="problem-card">
+        <div className="container">
+          <SectionCard id="problematica" title="Principales Problemas Planteados por Nuestros Clientes:" className="problem-card">
             <ProblemHighlights items={problematica} />
           </SectionCard>
 
@@ -973,11 +954,9 @@ export default function App() {
 
           <SectionCard id="proceso" title="Nuestro proceso">
             <div className="process-grid">
-              {procesoPasos.map((paso) => (
+              {procesoPasos.map((paso, index) => (
                 <article key={paso.id} className="process-step-card">
-                  <span className="process-step-icon" aria-hidden="true">
-                    <ProcessStepIcon id={paso.id} />
-                  </span>
+                  <span className="process-step-number" aria-hidden="true">{index + 1}</span>
                   <div>
                     <h3>{paso.title}</h3>
                     <p>{paso.text}</p>
@@ -987,57 +966,17 @@ export default function App() {
             </div>
           </SectionCard>
 
-          <SectionCard id="plazos" className="plazos-card">
-            <span className="plazos-decor" aria-hidden="true">
-              <PlazosDecorIcon />
-            </span>
-            <p className="plazos-duration">Implementación estimada: 5 meses</p>
-            <div className="plazos-flow" aria-label="Etapas del proyecto">
-              {plazosEtapas.map((etapa, index) => (
-                <React.Fragment key={etapa.id}>
-                  <article className="plazo-step">
-                    <span className="plazo-icon" aria-hidden="true">
-                      <PlazoIcon id={etapa.id} />
-                    </span>
-                    <h3>{etapa.title}</h3>
-                    <p>{etapa.caption}</p>
-                  </article>
-                  {index < plazosEtapas.length - 1 ? <span className="plazo-arrow" aria-hidden="true">→</span> : null}
-                </React.Fragment>
-              ))}
-            </div>
-          </SectionCard>
-
-          <SectionCard id="beneficios">
-            <div className="benefits-shell">
-              <div className="benefits-heading">
-                <span className="kicker">Beneficios</span>
-                <h2>Una&nbsp;operación más clara y más ágil</h2>
-              </div>
-              <ImpactList items={beneficios} className="impact-list-beneficios" />
-            </div>
-          </SectionCard>
-
-          <section className="correlation-highlight" aria-label="Mensaje clave de correlación">
-            <p>
-              <span className="correlation-lead">Lo más importante:</span>{' '}
-              <span className="correlation-message">
-                correlacionar datos entre áreas para detectar causas y definir acciones concretas.
-              </span>
-            </p>
-          </section>
-
           <section id="contacto-bloque" aria-label="Contexto de empresa y contacto">
             <SectionCard id="quienes-somos" kicker="Equipo" title="¿Quiénes somos?">
               <div className="about-copy">
                 <p>
-                  Desde 2007 trabajamos con organizaciones que necesitan entender su propia información. Más de <strong>60 proyectos en distintos sectores</strong> nos dieron una certeza: el problema casi nunca es la falta de datos — es que esos datos están dispersos, desconectados o en manos de pocas personas.
+                  Somos un equipo multidisciplinario de consultores con experiencia en <strong>Business Intelligence</strong>, <strong>Big Data</strong> e <strong>Inteligencia Artificial</strong> aplicada.
                 </p>
                 <p>
-                  Construimos la estructura que conecta esas piezas: integraciones, modelos de datos y tableros que el equipo de negocio puede operar <strong>sin depender de soporte técnico permanente</strong>.
+                  Llevamos más de <strong>60 proyectos</strong> desarrollados para pymes, grandes empresas y el sector público — en salud, retail, agroindustria, gobierno municipal y más.
                 </p>
                 <p>
-                  Trabajamos con <strong>Power BI</strong>, <strong>Apache Superset</strong>, <strong>Pentaho</strong> y <strong>QlikView</strong>. La herramienta la elegimos según cada organización — no al revés.
+                  Trabajamos con <strong>QlikView</strong>, <strong>Power BI</strong> y <strong>Apache Superset</strong>, y el conocimiento generado en cada proyecto queda en la organización, no en nosotros.
                 </p>
               </div>
             </SectionCard>
